@@ -1,9 +1,9 @@
 import { Directive, ElementRef, OnInit } from '@angular/core';
 
 @Directive({
-  selector: '[appBasicHighlight]'
+  selector: '[appPageTitleDirective]'
 })
-export class BasicHighlightDirective implements OnInit {
+export class PageTitleDirective implements OnInit {
 
   constructor(private elementRef: ElementRef) { }
 
@@ -12,5 +12,6 @@ export class BasicHighlightDirective implements OnInit {
     this.elementRef.nativeElement.style.padding = '1rem';
     this.elementRef.nativeElement.style.borderRadius = '0.5rem';
     this.elementRef.nativeElement.style.color = '#333333';
+    this.elementRef.nativeElement.style.fontWeight = 'bold'
   }
 }
